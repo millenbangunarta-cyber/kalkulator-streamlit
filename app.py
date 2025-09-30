@@ -3,7 +3,7 @@ import ast, operator as op
 
 st.set_page_config(page_title="Kalkulator Streamlit", page_icon="🧮", layout="centered")
 
-# ====== Tambahkan CSS Background ======
+# ====== CSS Background + Warna Tulisan ======
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
@@ -11,12 +11,16 @@ page_bg_img = """
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: black; /* warna teks default */
 }
 [data-testid="stHeader"] {
     background: rgba(0,0,0,0);
 }
 [data-testid="stToolbar"] {
     right: 2rem;
+}
+h1, h2, h3, h4, h5, h6, p, div, span, label {
+    color: black !important; /* pastikan semua teks jadi hitam */
 }
 </style>
 """
