@@ -3,6 +3,26 @@ import ast, operator as op
 
 st.set_page_config(page_title="Kalkulator Streamlit", page_icon="🧮", layout="centered")
 
+# ====== Tambahkan CSS Background ======
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+[data-testid="stToolbar"] {
+    right: 2rem;
+}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# ====== Judul ======
 st.title("🧮 Kalkulator Sederhana")
 
 # Operator yang diizinkan
